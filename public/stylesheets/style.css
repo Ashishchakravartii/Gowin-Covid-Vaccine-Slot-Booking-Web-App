@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+}
+
+.main{
+    width: 100vw;
+}
+
+nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100vw;
+    height: 9vh;
+    background-color: #79797a;
+    /* background-color: #252830; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5vmax 3vmax;
+    font-family: "Roboto";
+
+
+
+    
+}
+nav >h2{
+    color: #bdc9c1;
+}
+nav >h2>img{
+    width: 8vmax;
+    /* background-color: white; */
+    border-right: 2px solid black;
+    padding-right: 0.5vmax;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4vmax;
+    color: #d0d0d5;
+}
+nav ul>li>button{
+    background-color: #47CF73;
+    color: black;
+    padding: 0.7vmax 1vmax;
+    border-radius: 5px;
+    border: 0;
+}
+
+.page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #131417;
+    font-family: "Roboto";
+
+
+}
+.p1-left{
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    background-image: url("https://www.cowin.gov.in/assets/images/free_covid_precaution_dose.svg");
+}
+.p1-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vmax 0.1vmax;
+    
+}
+.p1-right >h1{
+    font-size: 5vmax;
+    color: white;
+}
+.p1-right >h1>span{
+    color: #47CF73;
+}
+.p1-right >h2>span{
+    color: #47CF73;
+}
+.p1-right >h2{
+    width: 100%;
+    font-size: 1.2vmax;
+    color: #9e9fa3;
+}
+
+/* ------------------------------- page 2 */
+
+.page2{
+    width: 100vw;
+    height: 60vh;
+    background-color: #252830;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto";
+
+}
+.page2 img{
+    width: 30%;
+    margin-right: 12vmax;
+    /* background-color: yellow; */
+}
+.page2 div{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 5vmax;
+    color: white;
+    font-family: "Roboto";
+    /* background-color: rgb(42, 158, 131); */
+
+
+}
+
+.page2 div>h1{
+    width: 100%;
+    color: white;
+    word-spacing: 0.1vmax;
+    letter-spacing: 0.4vmax;
+}
+.page2 div>p{
+    width: 90%;
+    color: #9e9fa3;
+    margin-top: 1vmax;
+    font-size: 1.1vmax;
+}
+/* ------------------------------- page 3 */
+
+.page3{
+    width: 100vw;
+    height: 60vh;
+    background-color: #252830;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto";
+
+}
+.page3 img{
+    width: 30%;
+    margin-left: 10vmax;
+    /* background-color: yellow; */
+}
+.page3 div{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 5vmax;
+    color: white;
+    font-family: "Roboto";
+    /* background-color: rgb(42, 158, 131); */
+
+
+}
+
+.page3 div>h1{
+    width: 100%;
+    color: white;
+    word-spacing: 0.1vmax;
+    letter-spacing: 0.4vmax;
+}
+.page3 div>p{
+    width: 90%;
+    color: #9e9fa3;
+    margin-top: 1vmax;
+    font-size: 1.1vmax;
+}
+
+/* --------------------page 4 */
+.page4{
+    width: 100vw;
+    height: 60vh;
+    background-color: #252830;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto";
+
+}
+.page4 img{
+    width: 30%;
+    margin-right: 12vmax;
+    /* background-color: yellow; */
+}
+.page4 div{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 5vmax;
+    color: white;
+    font-family: "Roboto";
+    /* background-color: rgb(42, 158, 131); */
+
+
+}
+
+.page4 div>h1{
+    width: 100%;
+    color: white;
+    word-spacing: 0.1vmax;
+    letter-spacing: 0.4vmax;
+}
+.page4 div>p{
+    width: 90%;
+    color: #9e9fa3;
+    margin-top: 1vmax;
+    font-size: 1.1vmax;
+}
+
+/* ======================================= Footer ============================================= */
+
+footer{
+    width: 100%;
+    height: 55vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+footer div{
+    width: 50%;
+    height: 100%;
+}
+.footerDiv1{
+     font-family: 'Encode Sans SC', sans-serif;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+    
+
+}
+.footerDiv1 div{
+    height: 70%;
+    width: 100%;
+    
+}
+.footerDiv1 div>form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.emailspan{
+    height: 7vmax;
+    width: 100%;
+   padding-left: 10vmax;
+}
+.emailspan>input{
+    width: 17vmax;
+    height: 25%;
+    border-radius: 50px;
+    background-color: #282937;
+    border: none;
+    padding:1.5vmax 5vmax;
+    margin-top: 1vmax;
+}
+.emailspan button{
+    width: 5vmax;
+    background-color: #38A3A5;
+    color: white;
+    border: none;
+    height: 47%;
+    border-radius: 50px;
+    margin-right: 10vmax;
+}
+.copyright{
+    color: #93939A;
+    margin-bottom: 2vmax;
+}
+.logoSpan{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-left: 8vmax;
+    margin-top: 10vmax;
+    align-items: center;
+    justify-content: start;
+}
+
+.logo img{
+    width: 15vmax;
+}
+.footerDiv2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footerDiv2 ul{
+    list-style: none;
+
+}
+.footerDiv-top{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2vmax;
+    /* padding-top: 5vmax; */
+}
+.footerDiv-bottom{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ================== white bar */
+
+.whiteBar{
+    width: 100vw;
+    height: 7vh;
+    background-color: rgba(228, 223, 223, 0.749);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 3vmax;
+}
+.whiteBar div> img{
+    width: 1.5vmax;
+}
+.whiteBar h6{
+    font-size: 0.5vmax;
+}
+.whitebarLogo1{
+    width: 4vmax;
+}
+
