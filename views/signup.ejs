@@ -1,13 +1,24 @@
 <%- include("./partials/header") %>
 <%- include("./partials/nav") %>
 
-<h1></h1>
-<p>Welcome to SignUp page</p>
-<form action="/signup" method="post">
-    <input type="text" placeholder="username" name="username">
-    <input type="email" placeholder="email" name="email">
-    <input type="password" placeholder="password" name="password">
-    <button>Sign-up</button>
+<div class="signinMain">
+    <div class="signinLeft">
+        <h2 class="mb-3">Sign Up for Vaccination</h2>
+        <form class="gap-3" action="/signup" method="post">
+    <input class="form-control" type="text" placeholder="username" name="username">
+    <input class="form-control" type="email" placeholder="email" name="email">
+    <input class="form-control" type="password" placeholder="password" name="password">
+    <button class="btn">Sign-up</button>
+    <h6>Already have an account? <a href="/signin">Signin</a> | <a href="/getEmail">Forget Password?</a></h6>
 </form>
+    </div>
+    <div class="signinRight">
+
+    </div>
+    
+
+</div>
+
+
 
 <%- include("./partials/footer") %>

@@ -351,3 +351,60 @@ footer div{
     width: 4vmax;
 }
 
+/* ==================================== signin page -------------------- */
+
+.signinMain{
+    width: 100vw;
+    display: flex;
+    background-color: #efecec95;
+}
+.signinLeft{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signinLeft form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signinLeft form>h6>a{
+    text-decoration: none;
+    font-size: 1vmax;
+}
+.signinLeft form>input{
+    width: 50%;
+}
+.signinLeft form>button{
+    width: 40%;
+    background-color: #53ae70;
+    color: white;
+    border: none;
+}
+.signinRight{
+    width: 50%;
+    height: 100vh;
+    background-image: url("https://www.cowin.gov.in/assets/images/Children_Vaccination.svg");
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.forgetBtn{
+   width: 22vmax;
+   margin-top: 1vmax;
+   
+}
+.forgetPassBox{
+    background-image: url("https://www.cowin.gov.in/assets/images/faq_Section.svg");
+    background-size: 68%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+
