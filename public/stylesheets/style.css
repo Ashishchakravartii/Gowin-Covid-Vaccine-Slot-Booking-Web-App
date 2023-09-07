@@ -237,6 +237,7 @@ footer{
     height: 55vh;
     background-color: rgb(255, 255, 255);
     display: flex;
+
 }
 footer div{
     width: 50%;
@@ -402,9 +403,104 @@ footer div{
 }
 .forgetPassBox{
     background-image: url("https://www.cowin.gov.in/assets/images/faq_Section.svg");
-    background-size: 68%;
+    background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
+}
+
+/* ------------------------ Homepage properties */
+
+.homeMain{
+    width: 100vw;
+    margin-top: 4.5vmax;
+    background-image: url("https://www.cowin.gov.in/assets/images/Precaution_dose.svg");
+    background-size: contain;
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.slotViewWindow{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmax;
+    padding: 5vmax 0;
+}
+.detailsBox{
+    width: 80%;
+    height: 45vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px #79797a;
+    border-radius: 7px;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.headHome{
+    -webkit-text-stroke: 0.7px white;
+    font-size: 3vmax;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.userName{
+    color: #47895c;
+    font-family: "Roboto";
+}
+.detailsBox-top{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(128, 128, 128, 0.091);
+    border-bottom: 1px solid gray;
+    padding:0 1vmax ;
+    display: flex;
+}
+.detailsBox-top-left{
+    width: 12%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto";
+
+}
+.detailsBox-top-left i{
+    font-size: 3vmax;
+    color: rgb(95, 92, 92);
+}
+.detailsBox-top-right{
+    width: 85%;
+    height: 100%;
+}
+.detailsBoxNameDiv{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    padding-left: 1vmax;
+}
+.detailsBoxInfoDiv{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.2vmax;
+    font-family: "Roboto";
+
+}
+.detailsBox-bottom{
+    width: 100%;
+    height: 50%;
+    background-color: red;
+}
+.detailsBox-bottom div{
+    width: 50%;
+    height: 100%;
+    background-color: yellow;
 }
 
 
