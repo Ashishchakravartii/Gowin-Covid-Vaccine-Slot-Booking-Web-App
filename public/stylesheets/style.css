@@ -17,7 +17,7 @@ body{
 
 nav{
     position: fixed;
-    z-index: 1000;
+    z-index: 10000;
     top: 0;
     width: 100vw;
     height: 9vh;
@@ -430,10 +430,12 @@ footer div{
 }
 .detailsBox{
     width: 80%;
-    height: 45vh;
+    height: 40vh;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 5px #79797a;
     border-radius: 7px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     /* position: fixed; */
     top: 0;
     left: 0;
@@ -479,6 +481,7 @@ footer div{
     width: 100%;
     height: 40%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-left: 1vmax;
 }
@@ -495,12 +498,99 @@ footer div{
 .detailsBox-bottom{
     width: 100%;
     height: 50%;
-    background-color: red;
+    display: flex;
+    padding-top: 3vmax;
 }
-.detailsBox-bottom div{
+.detailsBox-bottom >.slotStatusDiv{
     width: 50%;
-    height: 100%;
-    background-color: yellow;
+    height: 50%;
+    border-radius: 7px;
+   
 }
 
+.detailsBox-bottom div:first-child{
+    padding-left: 10vmax;
+     display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+}
+.slotDetails{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* .address{
+    width: 80%;
+    height: 80%;
+    background-color: blue;
+} */
+
+/* --------------------------Booking page */
+.bookingContainer{
+     width: 100vw;
+     min-height: 850vh;
+    /* min-height: 100vh; */
+     background-image: url("https://www.cowin.gov.in/assets/images/partners_page.svg");
+    background-size: 30%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 6vmax;
+    font-family: "Roboto";
+}
+.BookingMain{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vmax;
+    position: absolute;
+    z-index: 5000;
+    padding-top: 3vmax;
+   
+
+}
+.overlayBooking{
+    width: 100vw;
+    /* min-height: 100vh;  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255,0.5);
+    z-index: 1000;
+}
+.centerInfo{
+    width: 50vw;
+    height: 20vh;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #79797a;
+    background-color: white;
+    padding: 1.1vmax 1vmax;
+}
+.BookHead{
+    -webkit-text-stroke: 0.3px white;
+}
+.slot{
+    font-size: 1vmax;
+    font-weight: 500;
+}
+.date{
+    font-family: "Roboto Light";
+}
+.sorryBox{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://www.cowin.gov.in/assets/images/Step_1.svg");
+    background-size: 30%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 

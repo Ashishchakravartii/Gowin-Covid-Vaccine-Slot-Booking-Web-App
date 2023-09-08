@@ -1,0 +1,33 @@
+<%- include("partials/header") %> <%- include("partials/nav") %>
+<div class="bookingContainer">
+  <div class="BookingMain">
+    <div class="w-100 d-flex justify-content-around">
+      <h1 class="pb-4 BookHead">Centers Available Near You</h1>
+      <button class="btn btn-success h-25">
+        <a class="text-light text-decoration-none" href="/home">Dashboard</a>
+      </button>
+    </div>
+
+    <% centers.forEach((elem,i) => { %>
+    <div class="centerInfo d-flex justify-content-between">
+      <div>
+        <h4><%= elem.center_name %></h4>
+        <p class="text-success slot">
+          Slots Availbale <span><%= elem.available_slots.slots %></span>
+        </p>
+        <h6 class="text-secondary date"><%= date.toLocaleString() %></h6>
+      </div>
+      <div class="">
+        <h4 class="text-primary slot">COVISHIELD</h4>
+        <button class="btn btn-sm btn-success mt-4 ms-2">
+          <a class="text-decoration-none text-light" href="/confirmation/<%= i %>">Book Slot</a>
+        </button>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+  <!-- <div class="overlayBooking">
+   
+  </div> -->
+</div>
+<%-include("partials/footer") %>

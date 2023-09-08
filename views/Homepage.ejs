@@ -1,43 +1,64 @@
 <%- include("partials/header") %> <%- include("partials/nav") %>
 <div class="homeMain">
   <div class="slotViewWindow">
-    <h1 class="headHome">Welcome to Go-win INDIA</h1>
-    <div class="detailsBox">
-      <div class="detailsBox-top">
-        <div class="detailsBox-top-left">
-          <i class="ri-user-fill"></i>
-        </div>
-        <div class="detailsBox-top-right">
-          <div class="detailsBoxNameDiv">
-            <h3 class="userName">Prabha Chakravarti</h3>
+    <div class="d-flex">
+      <h1 class="headHome">Welcome to Go-win INDIA</h1>
+      <button class="rounded-right-0 btn-success btn">
+        <a class="text-decoration-none text-light" href="/book">Book Slot</a>
+      </button>
+      <div class="detailsBox">
+        <div class="detailsBox-top">
+          <div class="detailsBox-top-left">
+            <i class="ri-user-fill"></i>
           </div>
-          <div class="detailsBoxInfoDiv">
-            <div>
-              <h6 class="text-success"><strong>REF ID</strong></h6>
-              <h6 class="text-secondary">115151</h6>
+          <div class="detailsBox-top-right">
+            <div class="detailsBoxNameDiv">
+              <h3 class="userName">Prabha Chakravarti</h3>
+          <button class="btn btn-danger btn-sm"><a class="text-decoration-none text-light" href="">Cancel Slot</a></button>
+
             </div>
-            <div>
-              <h6 class="text-success"><strong>SECRET CODE</strong></h6>
-              <h6 class="text-secondary">5441</h6>
+            <div class="detailsBoxInfoDiv">
+              <div>
+                <h6 class="text-success"><strong>REF ID</strong></h6>
+                <h6 class="text-secondary">115151</h6>
+              </div>
+              <div>
+                <h6 class="text-success"><strong>SECRET CODE</strong></h6>
+                <h6 class="text-secondary">5441</h6>
+              </div>
+              <div>
+                <h6 class="text-success"><strong>PHOTO ID</strong></h6>
+                <h6 class="text-secondary">ADHAAR CARD</h6>
+              </div>
+              <div>
+                <h6 class="text-success"><strong>YEAR OF BIRTH</strong></h6>
+                <h6 class="text-secondary">1981</h6>
+              </div>
             </div>
-            <div>
-              <h6 class="text-success"><strong>PHOTO ID</strong></h6>
-              <h6 class="text-secondary">ADHAAR CARD</h6>
-            </div>
-            <div>
-              <h6 class="text-success"><strong>YEAR OF BIRTH</strong></h6>
-              <h6 class="text-secondary">1981</h6>
-            </div>
-            
           </div>
         </div>
-      </div>
-      <div class="detailsBox-bottom">
-        <div></div>
-        <div></div>
+        <div class="detailsBox-bottom">
+          <div class="slotStatusDiv w-25">
+            <h6 class="text-success"><strong>SLOT STATUS</strong></h6>
+            <h6>Booked</h6>
+          </div>
+          <div class="slotDetails">
+            <div>
+              <h6 class="text-success"><strong>DATE</strong></h6>
+              <h6>9/8/2023</h6>
+            </div>
+            <div>
+              <h6 class="text-success"><strong>DOSE</strong></h6>
+              <h6>1</h6>
+            </div>
+            <div class="address">
+              <h6 class="text-success"><strong>ADDRESS</strong></h6>
+              <h6>4/23,indra Colony</h6>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    
   </div>
+  <%- include("partials/footer") %>
 </div>
-<%- include("partials/footer") %>

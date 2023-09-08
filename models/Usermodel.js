@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 const plm = require("passport-local-mongoose");
 
 const UserModel = mongoose.Schema({
+  slotToken: {
+    type: String,
+    default: null,
+  },
   username: {
     type: String,
     trim: true,
