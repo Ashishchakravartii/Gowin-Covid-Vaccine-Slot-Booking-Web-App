@@ -531,7 +531,7 @@ footer div{
 /* --------------------------Booking page */
 .bookingContainer{
      width: 100vw;
-     min-height: 850vh;
+     min-height: 1180vh;
     /* min-height: 100vh; */
      background-image: url("https://www.cowin.gov.in/assets/images/partners_page.svg");
     background-size: 30%;
@@ -564,12 +564,22 @@ footer div{
     z-index: 1000;
 }
 .centerInfo{
-    width: 50vw;
-    height: 20vh;
+    width: 60vw;
+    height: 25vh;
     border-radius: 5px;
     box-shadow: 0 0 5px #79797a;
     background-color: white;
-    padding: 1.1vmax 1vmax;
+    padding: 1.5vmax 1vmax;
+}
+.centerInfo h4{
+    font-family: "Roboto";
+   font-weight: 400;
+}
+.centerInfo h5{
+    font-family: "Roboto light";
+   font-weight: 800;
+   font-size: 1vmax;
+   letter-spacing: 0.1vmax;
 }
 .BookHead{
     -webkit-text-stroke: 0.3px white;

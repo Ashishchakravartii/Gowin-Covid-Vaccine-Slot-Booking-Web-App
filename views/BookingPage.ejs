@@ -12,9 +12,8 @@
     <div class="centerInfo d-flex justify-content-between">
       <div>
         <h4><%= elem.center_name %></h4>
-        <p class="text-success slot">
-          Slots Availbale <span><%= elem.available_slots.slots %></span>
-        </p>
+          <h5 class="text-success">Available Slots - <%= elem.available_slots%></h4>
+        <p class="text-secondary"><%= elem.address %>, Pincode <%= elem.pincode %> </p> 
         <h6 class="text-secondary date"><%= date.toLocaleString() %></h6>
       </div>
       <div class="">
