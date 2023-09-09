@@ -27,7 +27,8 @@ const UserModel = mongoose.Schema({
       "Invalid email address",
     ],
   },
-});
+  centers: { type: mongoose.Schema.Types.ObjectId, ref: "centerInfo" },
+},{timestamps:true});
 UserModel.plugin(plm);
 const user = mongoose.model("user", UserModel);
 module.exports = user;

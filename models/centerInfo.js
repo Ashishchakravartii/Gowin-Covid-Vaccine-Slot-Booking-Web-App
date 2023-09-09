@@ -7,12 +7,13 @@ const Centers = mongoose.Schema({
     type: String,
     default: null,
   },
-  center_id: String,
+  center_id: Number,
   center_name: String,
   address: String,
   pincode: Number,
-  available_slots:Number,
-});
+  available_slots: Number,
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
+},{timestamps: true });
 
 const center = mongoose.model("centerInfo", Centers);
 module.exports = center;

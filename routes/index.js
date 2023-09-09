@@ -11,7 +11,8 @@ const center = require("../models/centerInfo");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-    res.render("LandingPage");
+
+    res.render("LandingPage",{user:req.user});
 
 });
 
@@ -19,7 +20,7 @@ router.get("/", function (req, res, next) {
 // -----------signup---------------
 
 router.get("/signup", (req, res, next) => {
-  res.render("signup");
+  res.render("signup", { user: req.user });
 });
 router.post("/signup", async (req, res, next) => {
   try {
@@ -34,7 +35,7 @@ router.post("/signup", async (req, res, next) => {
 // -----------signIn---------------
 
 router.get("/signin", (req, res, next) => {
-  res.render("signin");
+  res.render("signin", { user: req.user });
 });
 router.post(
   "/signin",
@@ -49,10 +50,9 @@ router.post(
 
 router.get("/home",isLoggedIn,async(req,res,next)=>{
   try {
-    //  const center = await Centers.findOne({center_id: req.user.slotToken});
-    const centerId = await Centers.findOne({ "center_id" :1});
-     console.log(req.user.slotToken,centerId);
-      // res.render("Homepage");
+    const center = await Centers.findOne({center_id:req.user.slotToken});
+    //  console.log(centerId);
+      res.render("Homepage",{center,user:req.user});
   } catch (error) {
     
   }
@@ -86,7 +86,7 @@ router.post("/reset/:id", async (req, res, next) => {
 // ----------------- Get mail page ---------------
 
 router.get("/getEmail", (req, res, next) => {
-  res.render("getemail");
+  res.render("getemail", { user: req.user });
 });
 router.post("/getEmail", async (req, res, next) => {
   try {
@@ -132,8 +132,13 @@ router.get("/book", isLoggedIn,async function (req, res, next) {
     const date= new Date();
     const today= date;
     const centers = await Centers.find();
-  // console.log(centers)
-    res.render("BookingPage",{centers,date:today});
+    const user= req.user;
+    const center= await Centers.findOne({center_id:user.slotToken})
+    if(req.user.slotToken!==null){
+     center.available_slots - 1
+      center.save()
+    }
+    res.render("BookingPage",{centers,date:today,user});
   } catch (error) {
     console.log(error)
   }
@@ -148,7 +153,7 @@ router.get("/confirmation/:idx",isLoggedIn,async(req,res,next)=>{
 try {
   const user =req.user;
 if (user.slotToken !== null) {
-  res.render("sorry")
+  res.render("sorry", { user: req.user });
 }else{
 
   // console.log(req.params.idx)
