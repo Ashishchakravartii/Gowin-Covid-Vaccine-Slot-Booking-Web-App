@@ -8,6 +8,7 @@ body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    font-family: "Roboto";
 
 }
 
@@ -33,10 +34,14 @@ nav{
 
     
 }
-nav >h2{
+nav >a{
+    text-decoration: none;
+}
+
+nav >a >h2{
     color: #bdc9c1;
 }
-nav >h2>img{
+nav >a >h2>img{
     width: 8vmax;
     /* background-color: white; */
     border-right: 2px solid black;
@@ -49,6 +54,9 @@ nav ul{
     list-style: none;
     gap: 4vmax;
     color: #d0d0d5;
+}
+nav ul>li>a{
+    color: #c7d2cb;
 }
 nav ul>li>button{
     background-color: #47CF73;
@@ -444,10 +452,12 @@ footer div{
 
 .headHome{
     -webkit-text-stroke: 0.7px white;
-    font-size: 3vmax;
+    font-size: 3.5vmax;
     top: 0;
     left: 0;
     z-index: 2;
+    font-family: "Roboto";
+    letter-spacing: 0.2vmax;
 }
 .userName{
     color: #47895c;
@@ -531,7 +541,7 @@ footer div{
 /* --------------------------Booking page */
 .bookingContainer{
      width: 100vw;
-     min-height: 1180vh;
+     min-height: 580vh;
     /* min-height: 100vh; */
      background-image: url("https://www.cowin.gov.in/assets/images/partners_page.svg");
     background-size: 30%;
@@ -551,6 +561,8 @@ footer div{
     position: absolute;
     z-index: 5000;
     padding-top: 3vmax;
+    font-family: "Roboto Light";
+
    
 
 }
@@ -602,5 +614,43 @@ footer div{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: "Roboto";
+    font-weight: 400;
+}
+.dropIcon{
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+}
+.partnersBox{
+   display: inline-block;
+   white-space: no-wrap;
+   display: flex;
+   flex-direction: column;
+   gap: 2vmax;
+   /* padding: 1vmax; */
+   padding-top: 3vmax;
+   padding-left: 2vmax;
+   width: 100vw;
+   height: 100vh;
+   margin-top: 2vmax;
+
+}
+.partnersBox >div{
+ width: 100%;
+ height: 5vmax;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ display: flex;
+ justify-content: space-around;
+
+}
+.partnerLine >div>img{
+    width: 60%;
+}
+.partnerHead{
+    margin-left: 3vmax;
+    font-family: "Roboto";
 }
 

@@ -1,15 +1,18 @@
  <nav>
-  <h2><img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Ministry_of_Health_India.svg" alt="">  GoWin</h2>
-    <ul>
-      
-     
-       <% if(!user) { %>
+  <% if(!user) { %>
+    <a href="/"><h2><img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Ministry_of_Health_India.svg" alt="">  GoWin</h2></a>
+    <% }else {%>
+      <a href="/home"><h2><img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Ministry_of_Health_India.svg" alt="">  GoWin</h2></a>
+    <% } %>
+  <ul>
+    <% if(!user) { %>
          <li class="d-flex"><button><a class="text-decoration-none text-dark" href="/signin">REGISTER/SIGNIN</a></button></li>
         <% } else { %>
-        <li>DASHBOARD</li>
-      <li>VERIFY CERTIFICATE</li>
-      <li>FAQ</li>
-      <li>PARTNERS</li>
+        <li><a class=" text-decoration-none" href="/home">DASHBOARD</a></li>
+      <li><a class=" text-decoration-none" href="/notAvail"> VERIFY CERTIFICATE</a></li>
+      <li><a class=" text-decoration-none" href="/FAQ">FAQ</a></li>
+      <li><a class=" text-decoration-none" href="/partner">PARTNERS</a></li>
+       <li class="d-flex "><button class="bg-warning"><a class="text-decoration-none text-dark" href="/signout">signout</a></button></li>
         <%}%>
     </ul>
   </nav>

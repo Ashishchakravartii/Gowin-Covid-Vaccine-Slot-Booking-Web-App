@@ -8,14 +8,10 @@ passport.use(new LocalStrategy(UserModel.authenticate()));
 const { sendmail } = require("../utils/mail");
 const center = require("../models/centerInfo");
 
-
 /* GET home page. */
 router.get("/", function (req, res, next) {
-
-    res.render("LandingPage",{user:req.user});
-
+  res.render("LandingPage", { user: req.user });
 });
-
 
 // -----------signup---------------
 
@@ -48,15 +44,12 @@ router.post(
 
 // ----------------/home
 
-router.get("/home",isLoggedIn,async(req,res,next)=>{
+router.get("/home", isLoggedIn, async (req, res, next) => {
   try {
-    const center = await Centers.findOne({center_id:req.user.slotToken});
+    const center = await Centers.findOne({ center_id: req.user.slotToken });
     //  console.log(centerId);
-      res.render("Homepage",{center,user:req.user});
-  } catch (error) {
-    
-  }
- 
+    res.render("Homepage", { center, user: req.user });
+  } catch (error) {}
 });
 
 // ----------- SignOut--------------------
@@ -112,6 +105,7 @@ router.get("/change-password/:id", async (req, res, next) => {
     res.send(error);
   }
 });
+
 router.post("/change-password/:id", async (req, res, next) => {
   try {
     const user = await UserModel.findById(req.params.id);
@@ -123,51 +117,80 @@ router.post("/change-password/:id", async (req, res, next) => {
   }
 });
 
-
 // ------------------ Booking Page------------
 
-router.get("/book", isLoggedIn,async function (req, res, next) {
+router.get("/book", isLoggedIn, async function (req, res, next) {
   try {
-    
-    const date= new Date();
-    const today= date;
+    const date = new Date();
+    const today = date;
     const centers = await Centers.find();
-    const user= req.user;
-    const center= await Centers.findOne({center_id:user.slotToken})
-    if(req.user.slotToken!==null){
-     center.available_slots - 1
-      center.save()
-    }
-    res.render("BookingPage",{centers,date:today,user});
-  } catch (error) {
-    console.log(error)
-  }
+    const user = req.user;
+    const center = await Centers.findOne({ center_id: req.user.slotToken });
  
+    res.render("BookingPage", { centers, center,date: today, user });
+  } catch (error) {
+    console.log(error);
+  }
+});
+// ------------------ Cancel Slot------------
+
+router.get("/cancelSlot", isLoggedIn, async function (req, res, next) {
+  try {
+   const user= req.user;
+    const center = await Centers.findOne({ center_id: user.slotToken });
+    let slotCount = await center.available_slots;
+    center.available_slots = slotCount + 1;
+    center.save();
+   user.slotToken = null
+   user.save();
+    // console.log(user.slotToken);
+    res.redirect("/home")
+
+  } catch (error) {
+    res.send(error);
+  }
 });
 
 // --------------------/confirmation==========
 
-router.get("/confirmation/:idx",isLoggedIn,async(req,res,next)=>{
-//  await UserModel.slotToken = 1; 
-// res.render("confirm")
-try {
-  const user =req.user;
-if (user.slotToken !== null) {
-  res.render("sorry", { user: req.user });
-}else{
+router.get("/confirmation/:idx", isLoggedIn, async (req, res, next) => {
+  //  await UserModel.slotToken = 1;
+  // res.render("confirm")
+  try {
+    const user = req.user;
+    if (user.slotToken !== null) {
+      res.render("sorry", { user: req.user });
+    } else {
+      user.slotToken = req.params.idx;
+      user.save();
+      const center = await Centers.findOne({ center_id: user.slotToken });
+          let slotCount = await center.available_slots
+          center.available_slots= slotCount-1
+          center.save();
+      // console.log(center.available_slots);
 
-  // console.log(req.params.idx)
-   user.slotToken = req.params.idx;
-   user.save();
-   res.redirect("/home");
-} 
-}catch (error) {
-  console.log(error)
-
-
-}
+      res.redirect("/home");
+    }
+  } catch (error) {
+    console.log(error);
+  }
 });
 
+// --------------------- FAQ------------------
+
+router.get("/FAQ",(req,res)=>{
+  res.render("FAQ",{user:req.user})
+})
+// --------------------- Not Available------------------
+
+router.get("/notAvail",(req,res)=>{
+  res.render("NotAvail",{user:req.user})
+})
+// --------------------- Partner------------------
+
+router.get("/partner",(req,res)=>{
+  res.render("Partners",{user:req.user})
+})
 
 // -------------ISloggedIn Function-------------
 
@@ -177,11 +200,5 @@ function isLoggedIn(req, res, next) {
   }
   res.redirect("/signin");
 }
-
-
-
-
-
-
 
 module.exports = router;

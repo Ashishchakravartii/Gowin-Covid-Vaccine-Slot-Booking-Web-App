@@ -7,22 +7,27 @@
         <a class="text-light text-decoration-none" href="/home">Dashboard</a>
       </button>
     </div>
+ 
+    <a class="btn btn-success rounded-circle dropIcon" href="#footer"><i class="ri-arrow-down-line"></i></a>
 
     <% centers.forEach((elem,i) => { %>
+     <% if(i <19 ){ %>  
     <div class="centerInfo d-flex justify-content-between">
       <div>
         <h4><%= elem.center_name %></h4>
-          <h5 class="text-success">Available Slots - <%= elem.available_slots%></h4>
+          <h5 class="text-success">Available Slots  <%= elem.available_slots%></h4>
         <p class="text-secondary"><%= elem.address %>, Pincode <%= elem.pincode %> </p> 
         <h6 class="text-secondary date"><%= date.toLocaleString() %></h6>
       </div>
       <div class="">
         <h4 class="text-primary slot">COVISHIELD</h4>
+        
         <button class="btn btn-sm btn-success mt-4 ms-2">
           <a class="text-decoration-none text-light" href="/confirmation/<%= i %>">Book Slot</a>
         </button>
       </div>
     </div>
+    <% } %>
     <% }); %>
   </div>
   <!-- <div class="overlayBooking">

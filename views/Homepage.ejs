@@ -2,7 +2,7 @@
 <div class="homeMain">
   <div class="slotViewWindow">
     <div class="d-flex">
-      <h1 class="headHome">Welcome to Go-win INDIA</h1>
+      <h1 class="headHome">Welcome to <br> Go-win INDIA</h1>
       <button class="rounded-right-0 btn-success btn">
         <a class="text-decoration-none text-light" href="/book">CENTERS</a>
       </button>
@@ -20,7 +20,7 @@
       </button>
         <% } else { %>
        <button class="btn btn-danger btn-sm">
-                <a class="text-decoration-none text-light" href=""
+                <a class="text-decoration-none text-light" href="/cancelSlot"
                   >Cancel Slot</a
                 >
               </button>
@@ -37,8 +37,8 @@
                 <h6 class="text-secondary"><%= center?(center.pincode):("---") %></h6>
               </div>
               <div>
-                <h6 class="text-success"><strong>PHOTO ID</strong></h6>
-                <h6 class="text-secondary">ADHAAR CARD</h6>
+                <h6 class="text-success"><strong>CENTER NAME</strong></h6>
+                <h6 class="text-secondary"><%= center?(center.center_name):("---") %></h6>
               </div>
               <div>
                 <h6 class="text-success"><strong>Email</strong></h6>
